@@ -1,0 +1,1 @@
+Esta é a pasta root do projeto do jogo, de preferência ela não deve ser alterada
