@@ -6,14 +6,24 @@
   <datafiles number="1" name="datafiles"/>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
-  <backgrounds name="background"/>
+  <sprites name="sprites">
+    <sprite>sprites\s_BallPlayer</sprite>
+    <sprite>sprites\s_Bloco</sprite>
+    <sprite>sprites\sprite2</sprite>
+  </sprites>
+  <backgrounds name="background">
+    <background>background\bkg_Cthulhu</background>
+  </backgrounds>
   <paths name="paths"/>
-  <scripts name="scripts"/>
-  <fonts name="fonts"/>
-  <objects name="objects"/>
-  <timelines name="timelines"/>
-  <rooms name="rooms"/>
+  <objects name="objects">
+    <object>objects\obj_player</object>
+    <object>objects\obj_Block</object>
+    <object>objects\bloco_32</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\room1</room>
+    <room>rooms\room2</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
