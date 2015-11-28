@@ -11,6 +11,8 @@
     <sprite>sprites\s_Bloco</sprite>
     <sprite>sprites\sprite2</sprite>
     <sprite>sprites\sprite6</sprite>
+    <sprite>sprites\sprite4</sprite>
+    <sprite>sprites\sprite5</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bkg_Cthulhu</background>
@@ -34,12 +36,15 @@
     </objects>
     <object>objects\obj_player</object>
     <object>objects\obj_Block</object>
-    <object>objects\bloco_32</object>
+    <object>objects\bloco_64x48</object>
     <object>objects\obj_Totem1</object>
+    <object>objects\object11</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room2</room>
     <room>rooms\room1</room>
+    <room>rooms\room3</room>
+    <room>rooms\room4</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
