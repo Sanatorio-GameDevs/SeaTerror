@@ -14,6 +14,7 @@
     <sprite>sprites\sprite4</sprite>
     <sprite>sprites\sprite5</sprite>
     <sprite>sprites\pedra</sprite>
+    <sprite>sprites\pedrac</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bkg_Cthulhu</background>
