@@ -13,6 +13,7 @@
     <sprite>sprites\sprite6</sprite>
     <sprite>sprites\sprite4</sprite>
     <sprite>sprites\sprite5</sprite>
+    <sprite>sprites\pedra</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bkg_Cthulhu</background>
