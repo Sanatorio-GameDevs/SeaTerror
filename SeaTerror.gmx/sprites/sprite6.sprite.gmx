@@ -6,21 +6,20 @@
   <colkind>1</colkind>
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
-  <bboxmode>1</bboxmode>
-  <bbox_left>0</bbox_left>
-  <bbox_right>47</bbox_right>
-  <bbox_top>0</bbox_top>
-  <bbox_bottom>63</bbox_bottom>
-  <HTile>-1</HTile>
-  <VTile>-1</VTile>
+  <bboxmode>0</bboxmode>
+  <bbox_left>1</bbox_left>
+  <bbox_right>48</bbox_right>
+  <bbox_top>1</bbox_top>
+  <bbox_bottom>100</bbox_bottom>
+  <HTile>0</HTile>
+  <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>48</width>
-  <height>64</height>
+  <width>50</width>
+  <height>102</height>
   <frames>
-    <frame index="0">images\s_BallPlayer_0.png</frame>
-    <frame index="1">images\s_BallPlayer_1.png</frame>
+    <frame index="0">images\sprite6_0.png</frame>
   </frames>
 </sprite>

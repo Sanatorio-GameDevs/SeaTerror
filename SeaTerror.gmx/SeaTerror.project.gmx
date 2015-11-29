@@ -10,19 +10,36 @@
     <sprite>sprites\s_BallPlayer</sprite>
     <sprite>sprites\s_Bloco</sprite>
     <sprite>sprites\sprite2</sprite>
+    <sprite>sprites\sprite6</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bkg_Cthulhu</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
+    <objects name="Parents">
+      <objects name="Types">
+        <object>objects\obj_Scenery</object>
+        <object>objects\obj_Relic</object>
+        <object>objects\obj_Enemy</object>
+        <object>objects\obj_Altar</object>
+      </objects>
+      <objects name="Scenery">
+        <object>objects\obj_Stone</object>
+      </objects>
+      <objects name="Proporties">
+        <object>objects\obj_Solid</object>
+        <object>objects\obj_Movable</object>
+      </objects>
+    </objects>
     <object>objects\obj_player</object>
     <object>objects\obj_Block</object>
     <object>objects\bloco_32</object>
+    <object>objects\obj_Totem1</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room1</room>
     <room>rooms\room2</room>
+    <room>rooms\room1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

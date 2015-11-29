@@ -105,30 +105,37 @@ move_direction = (key_right - key_left);
         vsp += grav;
     else
         vsp = max_vsp;
-    if (place_meeting(x,y+1,bloco_32)) {
+    if (place_meeting(x,y+1,obj_Block)) {
         if (key_jump)
             vsp = jmp_accel;
     }
         
 //horizontal_collision
-if (place_meeting(x+hsp,y,bloco_32)) {
-    while !(place_meeting(x+last_direction,y,bloco_32))
-        x += last_direction;
-        hsp = 0;
-}
-else {
-    x += hsp;
-}
-
-//vertical_collision
-if (place_meeting(x,y+vsp,bloco_32)) {
-    while !(place_meeting(x,y+sign(vsp),bloco_32))
-        y += sign(vsp);
-        vsp =0;
-}
-else {
-    y += vsp;
-}
+    if (place_meeting(x+hsp,y,obj_Block)) {
+        while !(place_meeting(x+sign(hsp),y,obj_Block))
+            x += sign(hsp);
+            hsp = 0;
+    }
+    else {
+        x += hsp;
+    }
+    
+    //vertical_collision
+    if (place_meeting(x,y+vsp,obj_Block)) {
+        while !(place_meeting(x,y+sign(vsp),obj_Block))
+            y += sign(vsp);
+            vsp =0;
+    }
+    else {
+        y += vsp;
+    }
+    
+//moving objects
+    if (place_meeting (x,y,obj_movable)) {
+        with (obj_Totem1) {
+            x += 100;
+        }
+    }
         
 
 
