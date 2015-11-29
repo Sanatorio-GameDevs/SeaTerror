@@ -7,7 +7,107 @@
   <persistent>0</persistent>
   <parentName>obj_Solid</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///INIT MOVABLES
+
+mass    = 30;               //Massa do persongaem
+last_direction = 0;         //Ultima direção de movimento do personagem
+water_resistance = 1/15;    //Resistência da água
+
+grav = 0.5;
+
+hsp = 0;
+vsp = 0;
+
+max_hsp = 5;
+max_vsp = 5;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///MOVEMENT
+
+//horizontal_axis
+    if (hsp != 0) {
+        if (sign(hsp) &gt; 0) {         //Se estivesse se movendo para direita
+            hsp -= water_resistance * mass;
+            if (hsp &lt; 0)
+                hsp = 0;
+        }
+        else if (sign(hsp) &lt; 0) {    //Se estivesse se movendo para esquerda
+            hsp += water_resistance * mass;
+            if (hsp &gt; 0)
+                hsp = 0;
+        }
+    }
+
+//vertical_axis
+    if (vsp &lt;= max_vsp)
+        vsp += grav;
+    else
+        vsp = max_vsp;
+
+//horizontal_collision
+    if (place_meeting(x+hsp,y,obj_Solid)) {
+        while !(place_meeting(x+sign(hsp),y,obj_Solid))
+            x += sign(hsp);
+        hsp = 0;
+    }
+    else {
+        x += hsp;
+    }
+    
+    //vertical_collision
+    if (place_meeting(x,y+vsp,obj_Solid)) {
+        while !(place_meeting(x,y+sign(vsp),obj_Solid))
+            y += sign(vsp);
+        vsp =0;
+    }
+    else {
+        y += vsp;
+    }
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
