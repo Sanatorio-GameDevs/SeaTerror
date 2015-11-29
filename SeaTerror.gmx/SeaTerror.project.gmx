@@ -17,6 +17,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bkg_Cthulhu</background>
+    <background>background\background1</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
