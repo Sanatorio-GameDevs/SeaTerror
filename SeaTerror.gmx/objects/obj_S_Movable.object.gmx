@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_S_Movable</parentName>
+  <parentName>obj_Solid</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,9 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///INIT_RELIC
+            <string>///INIT MOVABLES
 
-event_inherited();
+hsp = 0;                    //Velocidade horizontal
+vsp = 0;                    //Velocidade vertical
+
+input_controlled = 0;       //A não ser que seja declarado ao contrário,
+                            //os objetos não recebem estimulos externos
 </string>
           </argument>
         </arguments>

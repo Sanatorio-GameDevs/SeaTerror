@@ -7,47 +7,62 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\s_BallPlayer</sprite>
-    <sprite>sprites\s_Bloco</sprite>
-    <sprite>sprites\sprite2</sprite>
-    <sprite>sprites\sprite6</sprite>
-    <sprite>sprites\sprite4</sprite>
-    <sprite>sprites\sprite5</sprite>
-    <sprite>sprites\sprite8</sprite>
+    <sprite>sprites\s_Player</sprite>
+    <sprite>sprites\s_Altar1</sprite>
+    <sprite>sprites\s_Relic1</sprite>
+    <sprite>sprites\s_Stone</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bkg_Cthulhu</background>
     <background>background\background1</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scripts_Movements.gml</script>
+    <script>scripts\scripts_Player.gml</script>
+  </scripts>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
   <objects name="objects">
     <objects name="Parents">
       <objects name="Types">
-        <object>objects\obj_Scenery</object>
-        <object>objects\obj_Relic</object>
         <object>objects\obj_Enemy</object>
+        <object>objects\obj_Character</object>
+        <object>objects\obj_Relic</object>
+        <object>objects\obj_Geiser</object>
+        <object>objects\obj_Scenery</object>
         <object>objects\obj_Altar</object>
       </objects>
-      <objects name="Scenery">
-        <object>objects\obj_Stone</object>
-      </objects>
       <objects name="Proporties">
-        <object>objects\obj_Solid</object>
-        <object>objects\obj_Movable</object>
+        <objects name="Physics">
+          <object>objects\obj_Solid</object>
+          <object>objects\obj_NonSolid</object>
+        </objects>
+        <object>objects\obj_S_Movable</object>
+        <object>objects\obj_S_NonMovable</object>
+        <object>objects\obj_NS_Movable</object>
+        <object>objects\obj_NS_NonMovable</object>
       </objects>
     </objects>
-    <object>objects\obj_player</object>
-    <object>objects\obj_Block</object>
-    <object>objects\bloco_64x48</object>
-    <object>objects\obj_Totem1</object>
-    <object>objects\object11</object>
+    <objects name="Childs">
+      <object>objects\obj_Relic1</object>
+      <object>objects\obj_Altar1</object>
+      <object>objects\obj_Stone1</object>
+      <object>objects\obj_Player</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\Debugger</room>
     <room>rooms\room4</room>
-    <room>rooms\room2</room>
-    <room>rooms\room1</room>
-    <room>rooms\room3</room>
   </rooms>
+  <constants number="5">
+    <constant name="GRAV">1</constant>
+    <constant name="WATER_RESISTANCE">1/2</constant>
+    <constant name="WATER_ACCEL">WATER_RESISTANCE * mass * -sign(hsp)</constant>
+    <constant name="INPUT_ACCEL">input_direction * h_accel</constant>
+    <constant name="PIXELS_2_METER">0.1</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
